@@ -53,7 +53,6 @@ while True:
     s_hsv = cv2.getTrackbarPos("S", "HSV Trackbar")
     v_hsv = cv2.getTrackbarPos("V", "HSV Trackbar")
 
-
     hsv = np.uint8([[[h_hsv, s_hsv, v_hsv]]])
     bgr_hsv = cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)
     img_hsv = np.zeros((256, 256, 3), np.uint8)
@@ -64,12 +63,10 @@ while True:
     s_hsl = cv2.getTrackbarPos("S", "HSL Trackbar") / 255.0
     l_hsl = cv2.getTrackbarPos("L", "HSL Trackbar") / 255.0
 
-
     r_hsl, g_hsl, b_hsl = colorsys.hls_to_rgb(h_hsl, l_hsl, s_hsl)
     r_hsl, g_hsl, b_hsl = int(r_hsl * 255), int(g_hsl * 255), int(b_hsl * 255)
     img_hsl = np.zeros((256, 256, 3), np.uint8)
     img_hsl[:] = [b_hsl, g_hsl, r_hsl]
-
 
     cv2.imshow("Image", img_display)
     cv2.imshow("HSV Trackbar", img_hsv)

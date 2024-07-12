@@ -1,1 +1,1 @@
-Histogram işlemleri, Hhstogram hesaplama ve çizimi, histogram eşitleme uygulamaları
+Histogram işlemleri, histogram hesaplama ve çizimi, histogram eşitleme uygulamaları

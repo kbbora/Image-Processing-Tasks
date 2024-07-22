@@ -2,8 +2,8 @@ import cv2
 
 cap = cv2.VideoCapture(0)
 
-face_cascade = cv2.CascadeClassifier(r"C:\Users\BORA\PythonProjeleri\PythonProjeleri\haarCascade\frontalface.xml")
-eye_cascade = cv2.CascadeClassifier(r"C:\Users\BORA\PythonProjeleri\PythonProjeleri\haarCascade\eye.xml")
+face_cascade = cv2.CascadeClassifier("haarCascade\frontalface.xml")
+eye_cascade = cv2.CascadeClassifier("haarCascade\eye.xml")
 
 while True:
     ret, frame = cap.read()
